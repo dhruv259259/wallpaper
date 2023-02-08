@@ -57,7 +57,7 @@ class _secondState extends State<second> {
               showDialog(context: context, builder: (context) {
                 return SimpleDialog(children: [
                   TextButton(onPressed: () {
-                    getImageFileFromAssets("image/${widget.all_list}").then((value) async {
+                    getImageFileFromAssets("${widget.all_list}").then((value) async {
                       int location = WallpaperManager.LOCK_SCREEN; //can be Home/Lock Screen
                       bool result = await WallpaperManager.setWallpaperFromFile(value.path, location);
                       print("result=$result");
@@ -66,7 +66,7 @@ class _secondState extends State<second> {
                     Navigator.pop(context);
                   }, child: Text("lock screen")),
                   TextButton(onPressed: () {
-                    getImageFileFromAssets("image/${widget.all_list[index]}").then((value) async {
+                    getImageFileFromAssets("${widget.all_list}").then((value) async {
                       int location = WallpaperManager.HOME_SCREEN; //can be Home/Lock Screen
                       bool result = await WallpaperManager.setWallpaperFromFile(value.path, location);
                       print("result=$result");
@@ -75,7 +75,7 @@ class _secondState extends State<second> {
                     Navigator.pop(context);
                   }, child: Text("home screen")),
                   TextButton(onPressed: () {
-                    getImageFileFromAssets("image/${widget.all_list}").then((value) async {
+                    getImageFileFromAssets("${widget.all_list}").then((value) async {
                       int location = WallpaperManager.BOTH_SCREEN; //can be Home/Lock Screen
                       bool result = await WallpaperManager.setWallpaperFromFile(value.path, location);
                       print("result=$result");
@@ -89,7 +89,7 @@ class _secondState extends State<second> {
               child: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("${widget.all_list[index]}"))),
+                        image: AssetImage("${widget.all_list}"))),
               ),
             );
           },),

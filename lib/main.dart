@@ -2,13 +2,11 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wallpaper/control_list.dart';
-import 'package:wallpaper/spless_screen.dart';
-
 import 'first_page.dart';
 
 void main() {
   runApp(MaterialApp(
-    home:screen(),
+    home: wallpaper(),
     debugShowCheckedModeBanner: false,
     theme: ThemeData.dark(),
   ));
